@@ -47,6 +47,7 @@ nav.navbar {
   }
   nav.navbar a.navbar-brand {
       width: 9%;
+      color:#fff;
   }
   nav.navbar .navbar-nav .nav-link.navbar-link {
     font-weight: 400;
