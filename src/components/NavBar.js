@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
+import "../css/NavBar.css";
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -27,9 +28,7 @@ const NavBar = () => {
     <>
       <Navbar expand="lg">
         <Container>
-          <Navbar.Brand href="#home" className="navbar-link">
-            Patrick Tejada
-          </Navbar.Brand>
+          <Navbar.Brand href="#home">Patrick Tejada</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav"></Navbar.Toggle>
           <Navbar.Collapse id="basiv-navbar-nav">
             <Nav className="ms-auto">
