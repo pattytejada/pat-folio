@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/3.png";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -12,8 +12,8 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
-  const period = 2000;
+  const toRotate = ["A Web Developer", "A Web Designer", "A Nerd"];
+  const period = 500;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -64,13 +64,12 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <span className="tagline">Welcome to my Portfolio</span>
+                  <h1>{`Hi! I'm Patrick.`} </h1>
                   <h1>
-                    {`Hi! I'm Patrick`}{" "}
                     <span
                       className="txt-rotate"
-                      dataPeriod="1000"
-                      data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
+                      dataPeriod="500"
+                      data-rotate='[ "A Web Developer", "A Web Designer", "A Nerd" ]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
@@ -94,7 +93,11 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__zoomIn" : ""
                   }
                 >
-                  <img src={headerImg} alt="Header Img" />
+                  <img
+                    className="banner-image"
+                    src={headerImg}
+                    alt="Header Img"
+                  />
                 </div>
               )}
             </TrackVisibility>
